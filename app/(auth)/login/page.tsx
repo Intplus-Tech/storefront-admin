@@ -14,6 +14,10 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Label } from "@/components/ui/label";
+import { useState } from "react";
+import { Checkbox } from "@/components/ui/check-box";
 const Login = () => {
   const loginForm = useForm<z.infer<typeof LoginSchema>>({
     resolver: zodResolver(LoginSchema),
@@ -22,6 +26,7 @@ const Login = () => {
       password: "",
     },
   });
+  const [keepUserSignedIn, setKeepUserSignedIn] = useState(false);
   const onSubmit = () => {};
   return (
     <div className="flex h-screen bg-gray-200 items-center justify-center">
@@ -33,7 +38,7 @@ const Login = () => {
           height={212}
           className="mx-auto"
         />
-        <h3 className="text-2xl font-semibold text-[#343434]">Sign In</h3>
+        <h3 className="text-2xl my-4 font-semibold text-[#343434]">Sign In</h3>
         <div className="w-[90%]  ">
           <Form {...loginForm}>
             <form onSubmit={loginForm.handleSubmit(onSubmit)}>
@@ -81,7 +86,15 @@ const Login = () => {
                   )}
                 />
               </div>
-
+              <div className="flex items-center gap-2 my-4">
+                <Checkbox id="terms1" />
+                <label
+                  htmlFor="terms1"
+                  className="text-sm font-light leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                >
+                  Keep me signed in
+                </label>
+              </div>
               <Button className="w-full my-4">Sign In</Button>
               <div className="flex items-center justify-center">
                 <p className="text-primary text-xs cursor-pointer">
