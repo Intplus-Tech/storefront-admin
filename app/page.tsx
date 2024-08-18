@@ -1,7 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-import Loader from "@/app/components/loader/Loader";
 import Image from "next/image";
 import { Loader2 } from "lucide-react";
 export default function Home() {
