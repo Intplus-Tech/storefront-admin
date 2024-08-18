@@ -3,6 +3,7 @@ import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import Loader from "@/app/components/loader/Loader";
 import Image from "next/image";
+import { Loader2 } from "lucide-react";
 export default function Home() {
   const router = useRouter();
   useEffect(() => {
@@ -20,7 +21,7 @@ export default function Home() {
         height={212}
         className="mx-auto"
       />
-      <Loader />;
+      <Loader2 className="animate-spin text-primary font-bold"  />;
     </div>
   );
 }
