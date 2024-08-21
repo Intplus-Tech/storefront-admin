@@ -14,6 +14,7 @@ import { z } from "zod";
 import { Input } from "./ui/input";
 import { PasswordResetSchema } from "@/app/schemas/new-password-schema";
 import { Button } from "./ui/button";
+import { useRouter } from "next/navigation";
 
 function NewPasswordDialog() {
   const newPasswordForm = useForm<z.infer<typeof PasswordResetSchema>>({
@@ -22,6 +23,7 @@ function NewPasswordDialog() {
       confirm_password: "",
     },
   });
+  const router = useRouter();
   const onSubmit = () => {};
   return (
     <div>
@@ -94,7 +96,12 @@ function NewPasswordDialog() {
             </Button>
           </div>
           <div className="flex items-center justify-center">
-            <p className="text-primary text-xs cursor-pointer">Go To Home</p>
+            <p
+              onClick={() => router.push("/login")}
+              className="text-primary text-xs cursor-pointer"
+            >
+              Go To Home
+            </p>
           </div>
         </div>
       </div>
