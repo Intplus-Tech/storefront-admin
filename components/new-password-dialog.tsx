@@ -1,14 +1,6 @@
 "use client";
 import React from "react";
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import {
   Form,
   FormControl,
   FormField,
@@ -56,7 +48,7 @@ function NewPasswordDialog() {
                     render={({ field }) => (
                       <FormItem className="space-y-0 w-full">
                         <FormLabel className="text-base text-[#343434] text-muted-foreground font-semibold">
-                          Email
+                          New Password
                         </FormLabel>
                         <FormControl className=" w-full">
                           <Input
@@ -100,6 +92,9 @@ function NewPasswordDialog() {
             <Button onClick={() => {}} className="w-full  my-4 text-white">
               Submit
             </Button>
+          </div>
+          <div className="flex items-center justify-center">
+            <p className="text-primary text-xs cursor-pointer">Go To Home</p>
           </div>
         </div>
       </div>
