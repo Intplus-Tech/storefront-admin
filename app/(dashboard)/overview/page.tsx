@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
 type Props = {};
 
 const OverviewPage = (props: Props) => {
-  return <div>OverviewPage</div>;
+  return <div className=" h-screen ">Dashboard Overview</div>;
 };
 
 export default OverviewPage;
