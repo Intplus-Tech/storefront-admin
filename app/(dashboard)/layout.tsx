@@ -16,7 +16,7 @@ export default function MainLayout({
           <LeftSidebar />
         </div>
         {/* Content area */}
-        <main className="w-[90%] h-screen pr-12 bg-gray-100 md:ml-40 md:pl-40  pt-10 px-6 flex flex-col  space-y-8 ">
+        <main className="w-[90%]  pr-12 bg-gray-100 md:ml-40 md:pl-40  pt-10 px-6 flex flex-col  space-y-8 ">
           {children}
         </main>
       </div>

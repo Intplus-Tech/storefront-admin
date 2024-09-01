@@ -6,12 +6,14 @@ import SellerActivity from "./seller-activity";
 import BuyerInsights from "./buyer-insights";
 import OrdersOverTime from "./orders-overtime";
 import LastSales from "./last-sales";
+import RecentTransactions from "./recent-transactions";
+import TopProducts from "./top-products";
 
 type Props = {};
 
 const OverviewPage = (props: Props) => {
   return (
-    <div className=" h-screen  w-full flex flex-col ">
+    <div className="   w-full flex flex-col ">
       <DashboardCommonHeader
         title="Dashboard"
         rightIcon={
@@ -32,6 +34,10 @@ const OverviewPage = (props: Props) => {
       <div className="flex my-8">
         <OrdersOverTime />
         <LastSales />
+      </div>
+      <div className="flex my-8  ">
+        <RecentTransactions />
+        <TopProducts />
       </div>
     </div>
   );
