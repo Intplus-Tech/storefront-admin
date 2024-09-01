@@ -9,14 +9,16 @@ export default function MainLayout({
   return (
     <div className="flex flex-col h-screen w-screen">
       <DashboardHeader />
-      <div className="flex flex-1 pt-20">
+      <div className="flex pt-20">
         {/* pt-20 to make space for the header */}
         {/* Sidebar beneath the header */}
-        <div className="flex-none w-60">
+        <div className="hidden h-full md:flex bg-white flex-col w-[15%] fixed inset-y-0 z-50 mt-20">
           <LeftSidebar />
         </div>
         {/* Content area */}
-        <main className="flex-1 p-6 bg-gray-100 overflow-auto">{children}</main>
+        <main className="w-[83%] md:ml-60  pt-10 px-4 flex flex-col bg-red-400 space-y-8 ">
+          {children}
+        </main>
       </div>
     </div>
   );
