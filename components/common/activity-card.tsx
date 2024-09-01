@@ -16,7 +16,7 @@ function ActivityCard({
 }: ActivityCardProps) {
   return (
     <div className="w-[240px] h-20 bg-white rounded-md px-4  shadow-md">
-      <div className="flex justify-between items-center p-3">
+      <div className="flex justify-between items-center py-3">
         <div>
           <p className="text-[#5A607F] text-xs font-extralight">
             {activityName}
@@ -29,11 +29,7 @@ function ActivityCard({
             <ChevronUp size={12} color="green" className="ml-2" />
           </div>
         </div>
-        <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#ECF2FF]">
-          <div className="w-4 h-4 rounded-sm  border-2 border-[#FD7E14] flex items-center justify-center">
-            {icon}
-          </div>
-        </div>
+        {icon}
       </div>
     </div>
   );

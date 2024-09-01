@@ -1,4 +1,7 @@
 import ActivityCard from "@/components/common/activity-card";
+import BlueBarChart from "@/public/assets/images/svg/blue-bar";
+import GreenBarChart from "@/public/assets/images/svg/green-bar";
+import YellowBarChart from "@/public/assets/images/svg/yellow-bar";
 import { ArrowUp, StoreIcon } from "lucide-react";
 import React from "react";
 
@@ -8,34 +11,50 @@ function SellerActivity() {
       activityName: "Sign Ups",
       activityCount: "10,543",
       activityPercentage: "22.45%",
-      icon: <ArrowUp size={12} color="#FD7E14" />,
+      icon: (
+        <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#ECF2FF]">
+          <div className="w-4 h-4 rounded-sm  border-2 border-[#FD7E14] flex items-center justify-center">
+            <ArrowUp size={12} color="#FD7E14" />
+          </div>
+        </div>
+      ),
     },
     {
       activityName: "Active Store",
       activityCount: "12,543",
       activityPercentage: "22.45%",
-      icon: <StoreIcon size={12} color="#FD7E14" />,
+      icon: (
+        <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#ECF2FF]">
+          <div className="w-4 h-4 rounded-sm  border-2 border-[#FD7E14] flex items-center justify-center">
+            <StoreIcon size={12} color="#FD7E14" />
+          </div>
+        </div>
+      ),
     },
     {
-      activityName: "Total Orders",
+      activityName: "Total Sales Volume",
       activityCount: "10,543",
       activityPercentage: "22.45%",
-      icon: <ArrowUp size={12} color="#FD7E14" />,
+      icon: (
+        <div className="">
+          <YellowBarChart />
+        </div>
+      ),
     },
     {
-      activityName: "Total Sales",
+      activityName: "Abandoned Sales",
       activityCount: "10,543",
-      activityPercentage: "22.45%",
-      icon: <ArrowUp size={12} color="#FD7E14" />,
+      activityPercentage: "15.34%",
+      icon: <GreenBarChart />,
     },
     {
-      activityName: "Total Revenue",
-      activityCount: "10,543",
-      activityPercentage: "22.45%",
-      icon: <ArrowUp size={12} color="#FD7E14" />,
+      activityName: "PWA Downloads",
+      activityCount: "5,690",
+      activityPercentage: "0%",
+      icon: <BlueBarChart />,
     },
   ];
-  
+
   return (
     <div className="flex flex-col">
       {/* Seller Activities */}
