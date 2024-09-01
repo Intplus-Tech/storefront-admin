@@ -48,7 +48,7 @@ function BuyerInsights() {
       icon: <GreenBarChart />,
     },
     {
-      activityName: "M/A",
+      activityName: "N/A",
       activityCount: "N/A",
       activityPercentage: "0%",
       icon: <BlueBarChart />,

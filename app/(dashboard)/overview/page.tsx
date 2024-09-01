@@ -35,7 +35,7 @@ const OverviewPage = (props: Props) => {
         <OrdersOverTime />
         <LastSales />
       </div>
-      <div className="flex my-8  bg-red-400">
+      <div className="flex my-8  ">
         <RecentTransactions />
         <TopProducts />
       </div>
