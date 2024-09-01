@@ -3,6 +3,9 @@ import DashboardCommonHeader from "@/components/common/dashboard-common-header";
 import { Settings, Settings2 } from "lucide-react";
 import React from "react";
 import SellerActivity from "./seller-activity";
+import BuyerInsights from "./buyer-insights";
+import OrdersOverTime from "./orders-overtime";
+import LastSales from "./last-sales";
 
 type Props = {};
 
@@ -24,6 +27,12 @@ const OverviewPage = (props: Props) => {
       />
 
       <SellerActivity />
+      <BuyerInsights />
+
+      <div className="flex my-8">
+        <OrdersOverTime />
+        <LastSales />
+      </div>
     </div>
   );
 };
