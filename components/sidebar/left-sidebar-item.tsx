@@ -46,7 +46,7 @@ function LeftSidebarRoutesItem({
       type="button"
       onClick={switchRoute}
       className={cn(
-        "flex items-center space-x-3 px-2 h-10 text-gray-500 transition-all group hover:text-[#FD7E14] hover:bg-[#FD7E14]/10",
+        "flex items-center space-x-3 rounded-md px-2 h-10 text-gray-500 transition-all group hover:text-[#FD7E14] hover:bg-[#FD7E14]/10",
         isActiveRoute && "bg-[#FD7E14] text-white"
       )}
     >
