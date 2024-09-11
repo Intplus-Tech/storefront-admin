@@ -1,9 +1,9 @@
-import React from 'react';
+import PasswordResetDialog from "@/components/password-reset-dialog";
+import React from "react";
 
 type Props = {};
 
 const PasswordResetPage = (props: Props) => {
-  return <div>PasswordResetPage</div>;
+  return <PasswordResetDialog />;
 };
-
 export default PasswordResetPage;
