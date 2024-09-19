@@ -4,11 +4,11 @@ import React from "react";
 
 type Props = {};
 
-const SettingsPage = (props: Props) => {
+const StoreManagementPage = (props: Props) => {
   return (
     <div>
       <DashboardCommonHeader
-        title="Admin Settings"
+        title="Manage Store"
         rightIcon={
           <div
             onClick={() => console.log("click")}
@@ -23,4 +23,4 @@ const SettingsPage = (props: Props) => {
   );
 };
 
-export default SettingsPage;
+export default StoreManagementPage;
